@@ -1,0 +1,15 @@
+id = "hermes.live-state"
+name = "Hermes Live State"
+version = "0.2.0"
+min_herdr_version = "0.9.0"
+description = "Show Hermes Agent's real lifecycle state and subagent activity in Herdr instead of screen-scraped guesses"
+platforms = ["linux", "macos", "windows"]
+
+# The bridge itself is a Hermes plugin (see hermes/herdr-live-state/). Herdr's
+# half is a diagnostic so a user can tell whether the bridge is installed,
+# enabled, and actually being heard.
+[[actions]]
+id = "status"
+title = "Hermes bridge status"
+contexts = ["workspace"]
+command = ["python3", "bin/status.py"]
